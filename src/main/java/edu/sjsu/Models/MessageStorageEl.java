@@ -14,10 +14,18 @@ public class MessageStorageEl {
         this.listeners = listeners;
     }
 
+    
+    /** 
+     * @return ArrayList<LineItem>
+     */
     public ArrayList<LineItem> getMessages() {
         return this.messages;
     }
 
+    
+    /** 
+     * @return ArrayList<ChangeListener>
+     */
     public ArrayList<ChangeListener> getListeners() {
         return this.listeners;
     }

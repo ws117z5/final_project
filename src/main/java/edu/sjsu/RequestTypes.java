@@ -65,6 +65,12 @@ public class RequestTypes {
         });
     }
 
+    
+    /** 
+     * @param user
+     * @return Socket
+     * @throws IOException
+     */
     public static Socket getSocket(User user) throws IOException {
         Socket socket = new Socket();
         socket.connect(new InetSocketAddress(user.getIp(), port), defaultTimeout);
@@ -72,16 +78,33 @@ public class RequestTypes {
         return socket;
     }
     
+    
+    /** 
+     * @param ip
+     * @return Socket
+     * @throws IOException
+     */
     public static Socket getSocket(String ip) throws IOException {
         Socket socket = new Socket();
         socket.connect(new InetSocketAddress(ip, port), defaultTimeout);
 
         return socket;
     }
+    
+    /** 
+     * @param port
+     */
     public static void setPort(int port) {
         RequestTypes.port = port;
     }
 
+    
+    /** 
+     * @param es
+     * @param user
+     * @param message
+     * @return Future<Boolean>
+     */
     public static Future<Boolean> sendMessage (ExecutorService es, User user, String message) {
         return es.submit(new Callable<Boolean>() {
             @Override
@@ -120,6 +143,11 @@ public class RequestTypes {
         });
     }
 
+    
+    /** 
+     * @param ip
+     * @return Future<String[]>
+     */
     public static Future<String[]> resolveClient (String ip) {
         return es.submit(new Callable<String[]>() {
             @Override
@@ -161,6 +189,14 @@ public class RequestTypes {
         });
     }
 
+    
+    /** 
+     * @param request
+     * @param ip
+     * @param port
+     * @param timeout
+     * @return Future<String>
+     */
     public static Future<String> request(final String request, final String ip, final int port, final int timeout) {
         return es.submit(new Callable<String>() {
             @Override

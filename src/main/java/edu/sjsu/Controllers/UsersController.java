@@ -26,7 +26,7 @@ public class UsersController {
    private User currentUser;
 
    /**
-      Constructs a blank invoice.
+      Constructs users controller.
    */
    public UsersController(String name)
    {
@@ -36,14 +36,26 @@ public class UsersController {
       listeners = new ArrayList<>();
    }
 
+   
+   /** 
+    * @return User
+    */
    public User getCurrentUser() {
       return currentUser;
    }
 
+   /**
+    * 
+    * @param user sets user
+    */
    public void setCurrentUser(User user) {
       this.currentUser = user;
    }
 
+   /**
+    * 
+    * @param listModel a list of users
+    */
    public void setListModel(DefaultListModel<User> listModel) {
       this.listModel = listModel;
    }
@@ -166,6 +178,11 @@ public class UsersController {
          };
    }
 
+   
+   /** 
+    * @param idx
+    * @return User
+    */
    public User getUserByIndex(int idx) {
       if(idx >= 0 && idx < users.size()) {
          return (User) users.get(idx);
@@ -173,6 +190,11 @@ public class UsersController {
       return null;
    }
 
+   
+   /** 
+    * @param uuid
+    * @return User
+    */
    public User getUserByUUID(String uuid) {
       if(!usersByHash.containsKey(uuid)) {
          return usersByHash.get(uuid);
@@ -180,6 +202,11 @@ public class UsersController {
       return null;
    }
 
+   
+   /** 
+    * @param ip
+    * @return User
+    */
    public User getUserByIp(String ip) {
       for(LineItem item: users) {
          if(item instanceof User) {
@@ -193,6 +220,11 @@ public class UsersController {
       return null;
    }
 
+   
+   /** 
+    * @param i
+    * @return User
+    */
    public User getUserByItem(LineItem i) {
       for(LineItem item: users) {
          if(item instanceof User) {
@@ -206,6 +238,11 @@ public class UsersController {
       return null;
    }
 
+   
+   /** 
+    * @param name
+    * @return User
+    */
    public User getUserByName(String name) {
       for(LineItem item: users) {
          if(item instanceof User) {

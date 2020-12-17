@@ -27,16 +27,27 @@ public class MessageController {
       //this.updateMessages();
    }
 
+   /**
+    * Updates messages view
+    */
    public void updateMessages() {
       ListFormatter<User> formatter = new MessageFormatter();
       MessageView.textArea.setText(format(formatter));
    }
 
 
+   /**
+    * 
+    * @return messages list
+    */
    public ArrayList<LineItem> getMessages() {
       return messages;
    }
 
+   /**
+    * 
+    * @return listeners list
+    */
    public ArrayList<ChangeListener> getListeners() {
       return listeners;
    }
@@ -101,6 +112,11 @@ public class MessageController {
         };
   }
 
+  /**
+   * 
+   * @param formatter a formatter for the list
+   * @return String text for the container
+   */
   public String format(ListFormatter<User> formatter)
   {
      String r = formatter.formatHeader(currentUser);

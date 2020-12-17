@@ -56,6 +56,10 @@ public class User implements LineItem {
         this.mc = new MessageController(this);
     }
 
+    
+    /** 
+     * @param name
+     */
     public void setName(String name) { 
         this.name = name; 
         this.item.setText(name);
