@@ -41,14 +41,11 @@ public class RequestTypes {
     static int port;
     static int defaultTimeout = 100;
    
-/**
+    /**
      * Future that checks if a network device port is opened
      * 
-     * @param es      ExecutorService
      * @param ip      String
-     * @param port    int
-     * @param timeout int ms
-     * @return Future<Boolean>
+     * @return Future Boolean
      */
     public static Future<Boolean> portIsOpen(final String ip) {
         return es.submit(new Callable<Boolean>() {
@@ -67,9 +64,10 @@ public class RequestTypes {
 
     
     /** 
-     * @param user
+     * Returns an active socet 
+     * @param user user to connect
      * @return Socket
-     * @throws IOException
+     * @throws IOException connection error
      */
     public static Socket getSocket(User user) throws IOException {
         Socket socket = new Socket();
@@ -80,9 +78,10 @@ public class RequestTypes {
     
     
     /** 
-     * @param ip
+     * returns a socket
+     * @param ip String
      * @return Socket
-     * @throws IOException
+     * @throws IOException connection error
      */
     public static Socket getSocket(String ip) throws IOException {
         Socket socket = new Socket();
@@ -92,7 +91,8 @@ public class RequestTypes {
     }
     
     /** 
-     * @param port
+     * sets default port
+     * @param port int port number
      */
     public static void setPort(int port) {
         RequestTypes.port = port;
@@ -100,10 +100,11 @@ public class RequestTypes {
 
     
     /** 
-     * @param es
-     * @param user
-     * @param message
-     * @return Future<Boolean>
+     * sends message to an active client
+     * @param es thread spawn
+     * @param user user to send
+     * @param message message to send
+     * @return Future Boolean 
      */
     public static Future<Boolean> sendMessage (ExecutorService es, User user, String message) {
         return es.submit(new Callable<Boolean>() {
@@ -145,8 +146,9 @@ public class RequestTypes {
 
     
     /** 
-     * @param ip
-     * @return Future<String[]>
+     * returns a future that resolves uuid|name
+     * @param ip ip string 
+     * @return Future String[] resolves String[] 
      */
     public static Future<String[]> resolveClient (String ip) {
         return es.submit(new Callable<String[]>() {
@@ -191,11 +193,13 @@ public class RequestTypes {
 
     
     /** 
-     * @param request
-     * @param ip
-     * @param port
-     * @param timeout
-     * @return Future<String>
+     * @deprecated
+     * sends a request to a client
+     * @param request request String
+     * @param ip ip String
+     * @param port port int
+     * @param timeout connections timeout
+     * @return Future String  resolves a string
      */
     public static Future<String> request(final String request, final String ip, final int port, final int timeout) {
         return es.submit(new Callable<String>() {
@@ -231,7 +235,11 @@ public class RequestTypes {
 
 
     /**
-     * 
+     * scans network for valid clients
+     * @param usersController UsersController
+     * @param port int
+     * @throws InterruptedException thread interupted
+     * @throws ExecutionException thread caught exception
      */
     public static void scanIps(UsersController usersController, int port) throws InterruptedException, ExecutionException {
         try {

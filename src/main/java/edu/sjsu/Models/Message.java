@@ -11,11 +11,10 @@ public class Message implements LineItem {
     private JTextField item = null;
     
     /**
-     Constructs a user.
-    @param description the description
-    @param price the price
-    */
-
+     * Constructs a message.
+     * @param user User
+     * @param message String
+     */
     public Message(User user, String message)
     {
         this.time = new Date();
@@ -25,16 +24,32 @@ public class Message implements LineItem {
 
     }
 
+    /**
+     * returns text field object for view
+     * @return JTextField
+     */
     public JTextField getItem() {
         return this.item;
     }
 
+    /**
+     * returns user of the message
+     * @return User
+     */
     public User getUser() {
         return this.user;
     }
 
+    /**
+     * returns this
+     * @return Message
+     */
     public Message getInstance() { return this; }
 
+    /**
+     * toString
+     * @return String
+     */
     public String toString() {
         return this.item.getText();
     }

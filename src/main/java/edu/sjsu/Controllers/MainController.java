@@ -18,10 +18,10 @@ public class MainController {
 
     
     /** 
-     * @param port
-     * @param name
-     * @throws InterruptedException
-     * @throws ExecutionException
+     * @param port int 
+     * @param name String
+     * @throws InterruptedException thread was interrupted
+     * @throws ExecutionException thread caought exception
      */
     public static void init(int port, String name) throws InterruptedException, ExecutionException {
 
@@ -51,6 +51,7 @@ public class MainController {
 
     
     /** 
+     * returns a user
      * @return User
      */
     public static User getUser() {
@@ -59,6 +60,7 @@ public class MainController {
 
     
     /** 
+     * Gets a user controller
      * @return UsersController
      */
     public static UsersController getUsersController() {
@@ -67,6 +69,7 @@ public class MainController {
 
     
     /** 
+     * returns a message controller
      * @return MessageController
      */
     public static MessageController getMessageController() {
@@ -75,7 +78,8 @@ public class MainController {
 
     
     /** 
-     * @param user
+     * returns a User message controller
+     * @param user User
      * @return MessageController
      */
     public static MessageController getMessageController(User user) {
@@ -84,7 +88,8 @@ public class MainController {
 
     
     /** 
-     * @param uc
+     * sets a user controller
+     * @param uc UsersController
      */
     public static void setUsersController(UsersController uc) {
         MainController.uc = uc;
@@ -93,7 +98,7 @@ public class MainController {
 
     
     /** 
-     * @param mc
+     * @param mc MessageController
      */
     public static void setMessageController(MessageController mc) {
         MainController.mc = mc;

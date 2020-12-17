@@ -26,8 +26,10 @@ public class UsersController {
    private User currentUser;
 
    /**
+    * 
       Constructs users controller.
-   */
+    * @param name String 
+    */
    public UsersController(String name)
    {
       usersByHash = new HashMap<String, User>();
@@ -38,6 +40,7 @@ public class UsersController {
 
    
    /** 
+    * returns current user
     * @return User
     */
    public User getCurrentUser() {
@@ -45,7 +48,7 @@ public class UsersController {
    }
 
    /**
-    * 
+    * changes current user
     * @param user sets user
     */
    public void setCurrentUser(User user) {
@@ -53,7 +56,7 @@ public class UsersController {
    }
 
    /**
-    * 
+    * Sets list model for view
     * @param listModel a list of users
     */
    public void setListModel(DefaultListModel<User> listModel) {
@@ -180,7 +183,7 @@ public class UsersController {
 
    
    /** 
-    * @param idx
+    * @param idx int
     * @return User
     */
    public User getUserByIndex(int idx) {
@@ -192,7 +195,7 @@ public class UsersController {
 
    
    /** 
-    * @param uuid
+    * @param uuid String
     * @return User
     */
    public User getUserByUUID(String uuid) {
@@ -204,7 +207,7 @@ public class UsersController {
 
    
    /** 
-    * @param ip
+    * @param ip String
     * @return User
     */
    public User getUserByIp(String ip) {
@@ -222,7 +225,7 @@ public class UsersController {
 
    
    /** 
-    * @param i
+    * @param i LineItem
     * @return User
     */
    public User getUserByItem(LineItem i) {
@@ -240,7 +243,7 @@ public class UsersController {
 
    
    /** 
-    * @param name
+    * @param name String
     * @return User
     */
    public User getUserByName(String name) {

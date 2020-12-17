@@ -16,6 +16,11 @@ import edu.sjsu.Controllers.*;
 public class MainView {
     public static JFrame frame = new JFrame();
 
+    /**
+     * creates basic gui 
+     * @param uc UsersController
+     * @param mc MessageController
+     */
     public static void createAndShowGUI(UsersController uc, MessageController mc) {
 
         UsersView.init(uc);

@@ -18,6 +18,10 @@ public class MessageView {
     //public static 
     public static JList list = null; //data has type Object[]
 
+    /**
+     * inits a message view gui
+     * @param mc MessageController
+     */
     public static void init(final MessageController mc) {
 
         ListFormatter formatter = new MessageFormatter();
@@ -36,10 +40,19 @@ public class MessageView {
         MessageView.messagePanel.setPreferredSize(new Dimension(550, 450));
     }
 
+    /**
+     * returns a scroll panel gui element
+     * @return JScrollPane
+     */
     synchronized static JScrollPane getPanel() {
         return MessageView.messagePanel;
     }
 
+    /**
+     * message click handler
+     * @param e MouseEvent
+     * @return MouseListener
+     */
     public static MouseListener messageClicked(MouseEvent e) {
         return new MouseListener() {
             public void mouseClicked(MouseEvent e) {

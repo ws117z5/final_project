@@ -1,0 +1,55 @@
+/Library/java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/home/bin/javadoc
+@options
+@packages
+-classpath
+'/Users/ws117z5/Dev/java/cs 151/third/myApp/target/classes:/Users/ws117z5/Dev/java/cs 151/third/myApp/target/test-classes:/Users/ws117z5/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/ws117z5/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'/Users/ws117z5/Dev/java/cs 151/third/myApp/src/test/java'
+-author
+-bottom
+'Copyright &#169; 2020. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/Users/ws117z5/Dev/java/cs 151/third/myApp/target/site/testapidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'myApp 1.0-SNAPSHOT Test API'
+-link
+'../apidocs'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/11/docs/api' '/Users/ws117z5/Dev/java/cs 151/third/myApp/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'myApp 1.0-SNAPSHOT Test API'
+edu.sjsu
+edu.sjsu
+/Users/ws117z5/Dev/java/cs 151/third/myApp/target/classes = 1608176647748
+/Users/ws117z5/Dev/java/cs 151/third/myApp/target/test-classes = 1608176648505
+/Users/ws117z5/.m2/repository/junit/junit/4.11/junit-4.11.jar = 1601431013161
+/Users/ws117z5/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar = 1601032069098
+/Users/ws117z5/Dev/java/cs 151/third/myApp/src/test/java = 1601430227928
+/Users/ws117z5/Dev/java/cs 151/third/myApp/target/site/testapidocs/constant-values.html = 1608176675513
+/Users/ws117z5/Dev/java/cs 151/third/myApp/target/site/testapidocs/member-search-index.zip = 1608176675539
+/Users/ws117z5/Dev/java/cs 151/third/myApp/target/site/testapidocs/overview-tree.html = 1608176675527
+/Users/ws117z5/Dev/java/cs 151/third/myApp/target/site/testapidocs/index.html = 1608176675553
+/Users/ws117z5/Dev/java/cs 151/third/myApp/target/site/testapidocs/package-search-index.js = 1608176675534
+/Users/ws117z5/Dev/java/cs 151/third/myApp/target/site/testapidocs/package-search-index.zip = 1608176675538
+/Users/ws117z5/Dev/java/cs 151/third/myApp/target/site/testapidocs/type-search-index.zip = 1608176675539
+/Users/ws117z5/Dev/java/cs 151/third/myApp/target/site/testapidocs/index-all.html = 1608176675540
+/Users/ws117z5/Dev/java/cs 151/third/myApp/target/site/testapidocs/allpackages-index.html = 1608176675547
+/Users/ws117z5/Dev/java/cs 151/third/myApp/target/site/testapidocs/deprecated-list.html = 1608176675551
+/Users/ws117z5/Dev/java/cs 151/third/myApp/target/site/testapidocs/member-search-index.js = 1608176675539
+/Users/ws117z5/Dev/java/cs 151/third/myApp/target/site/testapidocs/allclasses.html = 1608176675552
+/Users/ws117z5/Dev/java/cs 151/third/myApp/target/site/testapidocs/script.js = 1608176675558
+/Users/ws117z5/Dev/java/cs 151/third/myApp/target/site/testapidocs/stylesheet.css = 1608176675558
+/Users/ws117z5/Dev/java/cs 151/third/myApp/target/site/testapidocs/help-doc.html = 1608176675556
+/Users/ws117z5/Dev/java/cs 151/third/myApp/target/site/testapidocs/element-list = 1608176675500
+/Users/ws117z5/Dev/java/cs 151/third/myApp/target/site/testapidocs/allclasses-index.html = 1608176675545
+/Users/ws117z5/Dev/java/cs 151/third/myApp/target/site/testapidocs/type-search-index.js = 1608176675538
+/Users/ws117z5/Dev/java/cs 151/third/myApp/target/site/testapidocs/search.js = 1608176675560

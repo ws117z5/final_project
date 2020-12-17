@@ -22,6 +22,10 @@ public class UsersView {
     //public static 
     public static JList<User> list = null; //data has type Object[]
 
+    /**
+     * inits user view 
+     * @param uc UserController
+     */
     public static void init(final UsersController uc) {
 
         listModel = new DefaultListModel<>();
@@ -86,6 +90,10 @@ public class UsersView {
         //userPanel.setPreferredSize(new Dimension(250, 500));
     }
 
+    /**
+     * users panel
+     * @return JScrollPane
+     */
     public static JScrollPane getPanel() {
         return UsersView.userPanel;
     }

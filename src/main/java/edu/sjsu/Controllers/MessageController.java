@@ -17,6 +17,9 @@ public class MessageController {
    private ArrayList<ChangeListener> listeners;
    private User currentUser;
 
+   /**
+    * @param user for User
+    */
    public MessageController(User user)
    {
       messages = new ArrayList<>();
@@ -37,7 +40,7 @@ public class MessageController {
 
 
    /**
-    * 
+    * returns messages for current user
     * @return messages list
     */
    public ArrayList<LineItem> getMessages() {
@@ -45,7 +48,7 @@ public class MessageController {
    }
 
    /**
-    * 
+    * returns listeners fpr current user
     * @return listeners list
     */
    public ArrayList<ChangeListener> getListeners() {

@@ -16,6 +16,9 @@ import java.util.concurrent.Executors;
 import edu.sjsu.Models.*;
 import edu.sjsu.Controllers.*;
 
+/**
+ * Client connection handler
+ */
 class ClientTask implements Runnable {
     private final Socket clientSocket;
 
@@ -122,6 +125,9 @@ public class Server {
     public static Thread serverThread = null;
     public static final ExecutorService clientProcessingPool = Executors.newFixedThreadPool(10);
 
+    /**
+     * Starts a server in
+     */
     public static void startServer() {
 
         Runnable serverTask = new Runnable() {
@@ -154,6 +160,9 @@ public class Server {
         serverThread.start();
     }
 
+    /**
+     * Stops the server thread
+     */
     public static void killServer() {
         serverThread.interrupt();
     }

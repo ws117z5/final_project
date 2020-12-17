@@ -11,6 +11,11 @@ import edu.sjsu.Controllers.MainController;
 public class App {
 
     public static int port = 42069;
+
+    /**
+     * 
+     * @param args arg array[] 
+     */
     public static void main(String[] args) {
         // System.out.println("name : Vladimir Koroteev");
         // System.out.println("git : https://github.com/ws117z5/151_repo1");

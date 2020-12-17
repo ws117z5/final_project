@@ -21,7 +21,8 @@ public class ChatsController {
 
     
     /** 
-     * @param uuid
+     * Sets a chat
+     * @param uuid String
      */
     public static void setChat(String uuid) {
         if(chats.containsKey(uuid)) {
@@ -31,9 +32,10 @@ public class ChatsController {
 
     
     /** 
-     * @param user
-     * @param messages
-     * @param listeners
+     * prepares a storage
+     * @param user User
+     * @param messages ArrayList of LineItem
+     * @param listeners ArrayList of ChangeListener
      */
     public static void addMessageStorage(User user, ArrayList<LineItem> messages, ArrayList<ChangeListener> listeners) {
         MessageStorageEl storage = new MessageStorageEl(messages, listeners);
@@ -42,7 +44,8 @@ public class ChatsController {
 
     
     /** 
-     * @param mc
+     * adds a storage container
+     * @param mc MessageController 
      */
     public static void addMessageStorage(MessageController mc) {
         MessageStorageEl storage = new MessageStorageEl(mc.getMessages(), mc.getListeners());
@@ -51,7 +54,8 @@ public class ChatsController {
 
     
     /** 
-     * @param user
+     * returns a sorage container
+     * @param user User
      * @return MessageStorageEl
      */
     public static MessageStorageEl getMessageStorage(User user) {
@@ -60,7 +64,8 @@ public class ChatsController {
 
     
     /** 
-     * @param user
+     * checks if storage exists
+     * @param user User
      * @return boolean
      */
     public static boolean exists(User user) {
